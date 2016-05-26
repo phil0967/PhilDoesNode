@@ -20,5 +20,5 @@ app.use('/api/', require('./node_modules/routes/users.js'))
 
 
 
-app.listen(3000);
+app.listen(process.env.PORT ||3000);
 
