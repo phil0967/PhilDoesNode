@@ -16,7 +16,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.use('/api/', require('./node_modules/routes/users.js'))
+app.use('/api/', require('./node_modules/routes/users.js')
 
 
 
