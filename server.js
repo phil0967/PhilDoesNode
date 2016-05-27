@@ -9,16 +9,15 @@ app.use(cors());
 var mongodb = require('mongodb');
 var mongoClient = mongodb.MongoClient;
 var objectID = mongodb.ObjectID;
-var url = 'mongodb://phil123:birlund123@ds011472.mlab.com:11472/phmandatorydb';
+var url = 'mongodb://phildb:birlund123@ds011472.mlab.com:11472/phmandatorydb';
 
 // Request body parser
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.use('/api/', require('./node_modules/routes/users.js'))
+//app.use('/api/', require('./node_modules/routes/users.js'))
+app.use('/api/', users);
 
 
-
-app.listen(process.env.PORT ||3000);
-
+app.listen(3000);
